@@ -2,36 +2,36 @@
     <div class="lg:fixed lg:w-full flex inset-y-0 flex-col">
         <IL_Header />
 
-        <div class="p-8 grid grid-rows-4 sm:grid-cols-4 grid-cols-1 gap-6 h-full overflow-x-auto">
-            <div v-if="hours < 14" class="h-full row-span-4 row-start-1 col-start-1 border border-slate-700 rounded-lg grid-box">
+        <div class="p-8 grid grid-rows-12 sm:grid-cols-4 grid-cols-1 gap-6 h-full overflow-x-auto">
+            <div v-if="hours < 14" class="h-full row-span-12 row-start-1 col-start-1 border border-slate-700 rounded-lg grid-box">
                 <CanteenMenu id="46" />
             </div>
 
-            <div v-if="hours < 14" class="h-full row-span-4 row-start-1 col-start-2 border border-slate-700 rounded-lg grid-box">
+            <div v-if="hours < 14" class="h-full row-span-12 row-start-1 col-start-2 border border-slate-700 rounded-lg grid-box">
                 <CanteenMenu id="53" />
             </div>
 
-            <div v-if="hours >= 14" class="h-full row-span-4 row-start-1 col-start-1 border border-slate-700 rounded-lg grid-box">
+            <div v-if="hours >= 14" class="h-full row-span-12 row-start-1 col-start-1 border border-slate-700 rounded-lg grid-box">
                 <CanteenMenu id="53" />
             </div>
 
-            <!--<div v-if="hours < 14" class="h-full row-span-4 row-start-1 col-start-3 border border-slate-700 rounded-lg grid-box">
+            <!--<div v-if="hours < 14" class="h-full row-span-12 row-start-1 col-start-3 border border-slate-700 rounded-lg grid-box">
                 <CanteenMenu id="55"/>
             </div>-->
 
-            <!--<div v-if="hours >= 14" class="h-full row-span-4 col-span-2 row-start-1 col-start-2 border border-slate-700 rounded-lg grid-box">
+            <!--<div v-if="hours >= 14" class="h-full row-span-12 col-span-2 row-start-1 col-start-2 border border-slate-700 rounded-lg grid-box">
                 Vereinswerbung
             </div>-->
 
-            <div class="h-full row-span-2 row-start-1 col-start-3 border border-slate-700 rounded-lg grid-box">
-                <WeatherForecast />
+            <div class="h-full row-span-5 row-start-1 col-start-3 border border-slate-700 rounded-lg grid-box">
+                <WeatherForecast id="N5346" />
             </div>
 
-            <div class="h-full row-span-2 row-start-3 col-start-3 border border-slate-700 rounded-lg grid-box">
+            <div class="h-full row-span-4 row-start-6 col-start-3 border border-slate-700 rounded-lg grid-box">
                 <WebcamIlmenau />
             </div>
 
-            <div class="h-full row-span-2 row-start-1 col-start-4 border border-slate-700 rounded-lg grid-box">
+            <div class="h-full row-span-6 row-start-1 col-start-4 border border-slate-700 rounded-lg grid-box">
                 <IL_Events />
             </div>
 
@@ -43,7 +43,7 @@
                 <IL_BusDepartures_Kirchhoff />
             </div>-->
 
-            <div class="h-full row-span-2 row-start-3 col-start-4 border border-slate-700 rounded-lg overflow-hidden grid-box">
+            <div class="h-full row-span-6 row-start-7 col-start-4 border border-slate-700 rounded-lg overflow-hidden grid-box">
                 <DeparturesTrain id="8010178" />
             </div>
 
