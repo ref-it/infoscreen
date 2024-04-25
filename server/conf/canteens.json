@@ -1,0 +1,159 @@
+{
+    "canteens": [
+        {
+            "name": "Mensa Ehrenberg",
+			"city": "Ilmenau",
+            "id": 46
+        },
+        {
+            "name": "Cafeteria Ehrenberg",
+			"city": "Ilmenau",
+            "id": 53
+        },
+        {
+            "name": "NANOteria",
+			"city": "Ilmenau",
+            "id": 55
+        },
+        {
+            "name": "Cafeteria Röntgenbau",
+			"city": "Ilmenau",
+            "id": 57
+        },
+        {
+            "name": "Mensa Nordhäuser Straße",
+			"city": "Erfurt",
+            "id": 44
+        },
+        {
+            "name": "Mensa Altonaer Straße",
+			"city": "Erfurt",
+            "id": 47
+        },
+        {
+            "name": "Cafeteria Schlüterstraße",
+			"city": "Erfurt",
+            "id": 51
+        },
+        {
+            "name": "Cafeteria Leipziger Straße",
+			"city": "Erfurt",
+            "id": 52
+        },
+        {
+            "name": "Mensa Ernst-Abbee-Platz",
+			"city": "Jena",
+            "id": 44
+        },
+        {
+            "name": "Mensa Carl-Zeiss-Promenade",
+			"city": "Jena",
+            "id": 58
+        },
+        {
+            "name": "Mensa Philosophenweg",
+			"city": "Jena",
+            "id": 59
+        },
+        {
+            "name": "Cafeteria EAH",
+			"city": "Jena",
+            "id": 61
+        },
+        {
+            "name": "Cafeteria Zur Rosen",
+			"city": "Jena",
+            "id": 63
+        },
+        {
+            "name": "Cafeteria Uni-Hauptgebäude",
+			"city": "Jena",
+            "id": 64
+        },
+        {
+            "name": "Cafeteria Bibliothek",
+			"city": "Jena",
+            "id": 65
+        },
+        {
+            "name": "Mensa Weinberghof",
+			"city": "Nordhausen",
+            "id": 71
+        },
+        {
+            "name": "Mensa Blechhammer",
+			"city": "Schmalkalden",
+            "id": 73
+        },
+        {
+            "name": "Mensa am Park",
+			"city": "Weimar",
+            "id": 77
+        },
+        {
+            "name": "Cafeteria am Horn",
+			"city": "Weimar",
+            "id": 76
+        },
+        {
+            "name": "Cafeteria Schwanseestraße",
+			"city": "Weimar",
+            "id": 80
+        },
+        {
+            "name": "Cafeteria Coudraystraße",
+			"city": "Weimar",
+            "id": 81
+        }
+    ],
+    "additives": {
+        "1":  "Farbstoff",
+		"2":  "Konservierungsstoff",
+		"3":  "Antioxidationsmittel",
+		"4":  "Geschmacksverstärker",
+		"5":  "geschwefelt",
+		"6":  "geschwärzt",
+		"7":  "gewachst",
+		"8":  "Phosphat",
+		"9":  "Süßungsmittel",
+		"10": "Phenylalaninquelle",
+		"13": "kann die Aktivität und Aufmerksamkeit von Kindern beeinträchtigen",
+		"14": "kakaohaltige Fettglasur",
+		"15": "koffeinhaltig",
+		"16": "chininhaltig",
+		"T":  "tierische Bestandteile",
+		"T1": "tierische Gelatine",
+		"T2": "tierisches Lab",
+		"T3": "Karmin",
+		"T4": "Sepia",
+		"T5": "Honig"
+    },
+    "allergens": {
+        "Wz":  "Weizen",
+		"Ro":  "Roggen",
+		"Gs":  "Gerste",
+		"Hf":  "Hafer",
+		"Di":  "Dinkel",
+		"Ka":  "Kamut (Khorasan-Weizen)",
+		"Kr":  "Krebstiere",
+		"Ei":  "Hühnerei",
+		"Fi":  "Fisch",
+		"Er":  "Erdnüsse",
+		"So":  "Soja",
+		"Mi":  "Milch- und Milchzucker",
+		"Ma":  "Mandeln",
+		"Ha":  "Haselnüsse",
+		"Wa":  "Walnüsse",
+		"Ca":  "Cashewnüsse",
+		"Pe":  "Pekannüsse",
+		"Pa":  "Paranüsse",
+		"Pi":  "Pistazien",
+		"Mc":  "Macadamianüsse",
+		"Sel": "Sellerie",
+		"Sen": "Senf",
+		"Ses": "Sesam",
+		"Su":  "Schwefeloxid/Sulfite",
+		"Lu":  "Lupine",
+		"We":  "Weichtiere"
+    }
+}

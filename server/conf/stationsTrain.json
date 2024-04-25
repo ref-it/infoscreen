@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Eisenach",
+        "id": 8010097
+    },
+    {
+        "name": "Erfurt Hbf",
+        "id": 8010101
+    },
+    {
+        "name": "Gera Hbf",
+        "id": 8010125
+    },
+    {
+        "name": "Ilmenau",
+        "id": 8010178
+    },
+    {
+        "name": "Jena Paradies",
+        "id": 8011956
+    },
+    {
+        "name": "Jena West",
+        "id": 8011957
+    },
+    {
+        "name": "Nordhausen",
+        "id": 8010256
+    },
+    {
+        "name": "Schmalkalden",
+        "id": 8010315
+    },
+    {
+        "name": "Weimar",
+        "id": 8010366
+    }
+]
