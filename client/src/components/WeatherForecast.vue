@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-black/20 text-xl font-bold p-4 border-b border-slate-700 px-4 py-2 rounded-t-lg">Wetter</div>
+    <div class="bg-black/20 text-xl font-bold p-4 border-b border-zinc-700 px-4 py-2 rounded-t-lg">Wetter</div>
     <div class="flex flex-1 self-stretch w-full h-full overflow-auto">
         <div class="w-full grid grid-cols-4 grid-rows-[3rem_1fr_3rem_3rem] gap-x-4 gap-y-0.5 text-center p-4 text-base">
             <div v-for="(item, index) in forecastDates" :key="index" class="bg-black/20 rounded-t-md flex items-center justify-center font-bold">{{ item }}</div>
@@ -27,12 +27,12 @@
 
             <div v-for="(item, index) in forecast.days" :key="index" class="flex w-full">
                 <span v-if="item.temperatureMax / 10 < -5" class="bg-sky-700 flex items-center justify-center w-full">{{ item.temperatureMax / 10 }} °C</span>
-                <span v-if="item.temperatureMax / 10 < 0" class="bg-cyan-500 text-slate-800 flex items-center justify-center w-full">{{ item.temperatureMax / 10 }} °C</span>
+                <span v-if="item.temperatureMax / 10 < 0" class="bg-cyan-500 text-zinc-800 flex items-center justify-center w-full">{{ item.temperatureMax / 10 }} °C</span>
                 <span v-if="item.temperatureMax / 10 < 5" class="bg-emerald-600 flex items-center justify-center w-full">{{ item.temperatureMax / 10 }} °C</span>
                 <span v-else-if="item.temperatureMax / 10 < 10" class="bg-green-700 flex items-center justify-center w-full">{{ item.temperatureMax / 10 }} °C</span>
-                <span v-else-if="item.temperatureMax / 10 < 15" class="bg-lime-500 text-slate-800 flex items-center justify-center w-full">{{ item.temperatureMax / 10 }} °C</span>
-                <span v-else-if="item.temperatureMax / 10 < 20" class="bg-lime-300 text-slate-800 flex items-center justify-center w-full">{{ item.temperatureMax / 10 }} °C</span>
-                <span v-else-if="item.temperatureMax / 10 < 25" class="bg-yellow-500 text-slate-800 flex items-center justify-center w-full">{{ item.temperatureMax / 10 }} °C</span>
+                <span v-else-if="item.temperatureMax / 10 < 15" class="bg-lime-500 text-zinc-800 flex items-center justify-center w-full">{{ item.temperatureMax / 10 }} °C</span>
+                <span v-else-if="item.temperatureMax / 10 < 20" class="bg-lime-300 text-zinc-800 flex items-center justify-center w-full">{{ item.temperatureMax / 10 }} °C</span>
+                <span v-else-if="item.temperatureMax / 10 < 25" class="bg-yellow-500 text-zinc-800 flex items-center justify-center w-full">{{ item.temperatureMax / 10 }} °C</span>
                 <span v-else-if="item.temperatureMax / 10 < 30" class="bg-orange-500 flex items-center justify-center w-full">{{ item.temperatureMax / 10 }} °C</span>
                 <span v-else class="bg-red-700 flex items-center justify-center">{{ item.temperatureMax / 10 }} °C</span>
             </div>
@@ -40,12 +40,12 @@
 
             <div v-for="(item, index) in forecast.days" :key="index" class="flex w-full">
                 <span v-if="item.temperatureMin / 10 < -5" class="bg-sky-700 flex items-center justify-center rounded-b-md w-full">{{ item.temperatureMin / 10 }} °C</span>
-                <span v-if="item.temperatureMin / 10 < 0" class="bg-cyan-500 text-slate-800 flex items-center justify-center rounded-b-md w-full">{{ item.temperatureMin / 10 }} °C</span>
+                <span v-if="item.temperatureMin / 10 < 0" class="bg-cyan-500 text-zinc-800 flex items-center justify-center rounded-b-md w-full">{{ item.temperatureMin / 10 }} °C</span>
                 <span v-if="item.temperatureMin / 10 < 5" class="bg-emerald-600 flex items-center justify-center rounded-b-md w-full">{{ item.temperatureMin / 10 }} °C</span>
                 <span v-else-if="item.temperatureMin / 10 < 10" class="bg-green-700 flex items-center justify-center rounded-b-md w-full">{{ item.temperatureMin / 10 }} °C</span>
-                <span v-else-if="item.temperatureMin / 10 < 15" class="bg-lime-500 text-slate-800 flex items-center justify-center rounded-b-md w-full">{{ item.temperatureMin / 10 }} °C</span>
-                <span v-else-if="item.temperatureMin / 10 < 20" class="bg-lime-300 text-slate-800 flex items-center justify-center rounded-b-md w-full">{{ item.temperatureMin / 10 }} °C</span>
-                <span v-else-if="item.temperatureMin / 10 < 25" class="bg-yellow-500 text-slate-800 flex items-center justify-center rounded-b-md w-full">{{ item.temperatureMin / 10 }} °C</span>
+                <span v-else-if="item.temperatureMin / 10 < 15" class="bg-lime-500 text-zinc-800 flex items-center justify-center rounded-b-md w-full">{{ item.temperatureMin / 10 }} °C</span>
+                <span v-else-if="item.temperatureMin / 10 < 20" class="bg-lime-300 text-zinc-800 flex items-center justify-center rounded-b-md w-full">{{ item.temperatureMin / 10 }} °C</span>
+                <span v-else-if="item.temperatureMin / 10 < 25" class="bg-yellow-500 text-zinc-800 flex items-center justify-center rounded-b-md w-full">{{ item.temperatureMin / 10 }} °C</span>
                 <span v-else-if="item.temperatureMin / 10 < 30" class="bg-orange-500 flex items-center justify-center rounded-b-md w-full">{{ item.temperatureMin / 10 }} °C</span>
                 <span v-else class="bg-red-700 flex items-center justify-center rounded-b-md w-full">{{ item.temperatureMin / 10 }} °C</span>
             </div>
@@ -71,6 +71,7 @@
             .get(url)
             .then((response: any) => {
                 forecast.value = response.data
+                forecastDates.value = []
                 for (let i = 0; i < response.data.days.length; i++) {
                     const date = response.data.days[i].dayDate
                     const dateSplit = date.split('-')

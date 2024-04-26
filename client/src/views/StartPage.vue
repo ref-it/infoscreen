@@ -3,7 +3,7 @@
         <IL_Header />
 
         <div class="p-8 grid grid-rows-4 grid-cols-4 gap-6 overflow-x-auto">
-            <div v-for="place in places" :key="place.title" class="h-full border border-slate-700 rounded-lg relative p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-yellow-400 border border-black/5 transition ease-in-out duration-300 rounded-lg shadow hover:bg-gray-100 bg-gray-50 dark:bg-slate-700 dark:hover:bg-slate-600">
+            <div v-for="place in places" :key="place.title" class="h-full border border-zinc-700 rounded-lg relative p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-yellow-400 border border-black/5 transition ease-in-out duration-300 rounded-lg shadow hover:bg-gray-100 bg-gray-50 dark:bg-zinc-700 dark:hover:bg-zinc-600">
                 <div>
                     <h3 class="text-2xl font-bold leading-6 text-gray-900 dark:text-white">
                         <router-link :to="place.href" class="focus:outline-none">

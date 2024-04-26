@@ -3,19 +3,19 @@
         <IL_Header />
 
         <div class="p-8 grid grid-rows-4 grid-cols-4 grid-cols-1 gap-6 h-full overflow-x-auto">
-            <div class="h-full row-span-4 row-start-1 col-start-1 border border-slate-700 rounded-lg grid-box">
+            <div class="h-full row-span-4 row-start-1 col-start-1 border border-zinc-700 rounded-lg grid-box">
                 <CanteenMenu id="46"/>
             </div>
 
-            <div class="h-full row-span-4 row-start-1 col-start-2 border border-slate-700 rounded-lg grid-box">
+            <div class="h-full row-span-4 row-start-1 col-start-2 border border-zinc-700 rounded-lg grid-box">
                 <CanteenMenu id="53" />
             </div>
 
-            <div class="h-full row-span-4 row-start-1 col-start-3 border border-slate-700 rounded-lg grid-box">
+            <div class="h-full row-span-4 row-start-1 col-start-3 border border-zinc-700 rounded-lg grid-box">
                 <CanteenMenu id="55" />
             </div>
 
-            <div class="h-full row-span-4 row-start-1 col-start-4 border border-slate-700 rounded-lg grid-box">
+            <div class="h-full row-span-4 row-start-1 col-start-4 border border-zinc-700 rounded-lg grid-box">
                 <CanteenMenu id="57" />
             </div>
         </div>

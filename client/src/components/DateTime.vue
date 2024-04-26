@@ -1,6 +1,6 @@
 <template>
     {{ day }}
-    <div class="h-8 w-px bg-slate-700" aria-hidden="true"></div>
+    <div class="h-8 w-px bg-zinc-700" aria-hidden="true"></div>
     {{ time }}
 </template>
 

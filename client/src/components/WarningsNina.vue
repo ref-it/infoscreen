@@ -1,8 +1,8 @@
 <template>
-    <div class="bg-black/20 text-xl font-bold p-4 border-b border-slate-700 px-4 py-2 rounded-t-lg">Warnungen</div>
+    <div class="bg-black/20 text-xl font-bold p-4 border-b border-zinc-700 px-4 py-2 rounded-t-lg">Warnungen</div>
     <div class="flex flex-1 self-stretch w-full h-full overflow-auto">
         <div v-if="warnings[0] != undefined" class="w-full text-base">
-            <div v-for="(item, index) in warnings" :key="index" class="px-4 py-2 border-b border-slate-700">
+            <div v-for="(item, index) in warnings" :key="index" class="px-4 py-2 border-b border-zinc-700">
                 <h2 class="pb-1 font-bold">{{ item.info[0].headline }}</h2>
                 <p>{{ item.info[0].description }}</p>
             </div>

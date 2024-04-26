@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-black/20 text-xl font-bold p-4 border-b border-slate-700 px-4 py-2 rounded-t-lg">Studentischer Konsul</div>
+    <div class="bg-black/20 text-xl font-bold p-4 border-b border-zinc-700 px-4 py-2 rounded-t-lg">Studentischer Konsul</div>
     <div class="flex flex-1 self-stretch w-full h-full">
         <div class="px-4 py-2">
             <h1 class="text-xl font-bold">Maximilian Keller</h1>

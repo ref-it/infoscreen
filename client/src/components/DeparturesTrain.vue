@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-black/20 text-xl font-bold p-4 border-b border-slate-700 pl-4 pr-2 py-2 rounded-t-lg grid header-with-badge">
+    <div class="bg-black/20 text-xl font-bold p-4 border-b border-zinc-700 pl-4 pr-2 py-2 rounded-t-lg grid header-with-badge">
         <span>Zugverbindungen</span>
         <div class="-mt-02">
             <span class="inline-flex items-center rounded-md bg-blue-400/10 ml-auto px-2 py-1 text-sm text-blue-400 ring-1 ring-inset ring-blue-400/30">{{ stationName }}</span>
@@ -7,14 +7,14 @@
     </div>
     <div v-if="trainDepartures.length > 0" class="h-full grid grid-box3">
         <div v-if="trainDepartures.length > 0">
-            <div class="grid grid-train bg-black/20 border-b border-slate-700">
+            <div class="grid grid-train bg-black/20 border-b border-zinc-700">
                 <div class="px-4 py-1.5 text-sm font-bold">Linie</div>
                 <div class="px-4 py-1.5 text-sm font-bold">Abfahrt</div>
                 <div class="px-4 py-1.5 text-sm font-bold">Ziel</div>
                 <div class="px-4 py-1.5 text-sm font-bold">Gleis</div>
             </div>
             <div class="h-full w-full overflow-y-auto">
-                <div v-for="(connection, index) in trainDepartures" :key="index" class="grid grid-train border-b border-slate-700">
+                <div v-for="(connection, index) in trainDepartures" :key="index" class="grid grid-train border-b border-zinc-700">
                     <div class="px-4 py-2 text-xl">{{ connection.category }} {{ connection.line }}</div>
                     <div class="px-4 py-2 text-xl">{{ connection.hours }}:{{ connection.minutes }}</div>
                     <div class="px-4 py-2 text-xl">{{ connection.destination }}</div>
