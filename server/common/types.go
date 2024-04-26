@@ -121,3 +121,21 @@ type WeatherForecastForecast struct {
 	Icon               []int `json:"icon"`
 	PrecipitationTotal []int `json:"precipitationTotal"`
 }
+
+type WarningsDashboard struct {
+	WarningID string `json:"id"`
+}
+
+type Warning struct {
+	Info []WarningInfo `json:"info"`
+}
+
+type WarningInfo struct {
+	Language    string `json:"language"`
+	Severity    string `json:"severity"`
+	Onset       string `json:"onset"`
+	Expires     string `json:"expires"`
+	Headline    string `json:"headline"`
+	Description string `json:"description"`
+	Instruction string `json:"instruction"`
+}

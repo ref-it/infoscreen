@@ -25,7 +25,7 @@ func ParseWeatherForecast(jsonResponse *http.Response) common.WeatherForecast {
 	return weatherForecast
 }
 
-func GetWeatherStationForecast(stationId string, dbClientId string, dbApiKey string) common.WeatherForecast {
+func GetWeatherStationForecast(stationId string) common.WeatherForecast {
 	var weatherForecast common.WeatherForecast
 	url := "https://s3.eu-central-1.amazonaws.com/app-prod-static.warnwetter.de/v16/forecast_mosmix_" + stationId + ".json"
 	reqest, _ := http.NewRequest("GET", url, nil)

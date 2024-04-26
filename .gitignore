@@ -23,6 +23,7 @@ server/conf/config.json
 server/data/departures/*
 server/data/menu/*
 server/data/weatherForecast/*
+server/data/warnings/*
 
 
 ##### Frontend #####
@@ -57,3 +58,5 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+
+client/src/assets/main.css

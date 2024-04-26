@@ -52,6 +52,7 @@ func main() {
 	go retrieve.GetMenu()
 	go retrieve.GetTrainDepartures()
 	go retrieve.GetWeatherForecast()
+	go retrieve.GetWarnings()
 
 	router := mux.NewRouter()
 
@@ -59,6 +60,7 @@ func main() {
 	router.HandleFunc("/api/departures/train", handle.TrainDearturesHandler)
 	router.HandleFunc("/api/departures/camil", handle.CamilDearturesHandler)
 	router.HandleFunc("/api/weather/forecast", handle.WeatherForecastHandler)
+	router.HandleFunc("/api/warnings", handle.WarningsHandler)
 	//http.Handle("/", router)
 
 	spa := spaHandler{staticPath: "../client/dist", indexPath: "index.html"}

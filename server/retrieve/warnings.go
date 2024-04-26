@@ -10,11 +10,11 @@ import (
 	"github.com/ref-it/infoscreen/server/parse"
 )
 
-func getAndSaveWeatherForecast() {
-	common.InfoLogger.Println("Retrieving weather forecast data")
+func getAndSaveWarnings() {
+	common.InfoLogger.Println("Retrieving NINA warnings data")
 
 	// Open the config file with a list of all station names and ID numbers
-	stationFilePath := "conf/stationsWeather.json"
+	stationFilePath := "conf/locationsWarnings.json"
 	stationDataFile, err := os.Open(stationFilePath)
 	if err != nil {
 		common.ErrorLogger.Printf("Unable to open file %s.", stationFilePath)
@@ -25,8 +25,8 @@ func getAndSaveWeatherForecast() {
 	}
 
 	// Unmarshal the JSON data
-	var stations []common.WeatherStationData
-	err = json.Unmarshal(stationDataFileBytes, &stations)
+	var locations []common.WeatherStationData
+	err = json.Unmarshal(stationDataFileBytes, &locations)
 	if err != nil {
 		common.ErrorLogger.Printf("Unable to unmarshal the content of %s.", stationFilePath)
 	}
@@ -46,31 +46,31 @@ func getAndSaveWeatherForecast() {
 		common.ErrorLogger.Printf("Unable to unmarshal the content of %s.", configFilePath)
 	}
 
-	// Iterate over all stations
-	for i := 0; i < len(stations); i++ {
+	// Iterate over all locations
+	for i := 0; i < len(locations); i++ {
 		// Retrieve and parse the station's departure data
-		weatherForecast := parse.GetWeatherStationForecast(stations[i].ID)
+		warnings := parse.GetWarningsDashboard(locations[i].ID)
 
 		// Marshal the station's departures
-		data, err := json.Marshal(weatherForecast)
+		data, err := json.Marshal(warnings)
 		if err != nil {
-			common.ErrorLogger.Printf("Unable to marshal station data (Station ID: %s)", stations[i].ID)
+			common.ErrorLogger.Printf("Unable to marshal location data (Location ID: %s)", locations[i].ID)
 		}
 
 		// Write the departures into a file
-		dataFilePath := "data/weatherForecast/" + stations[i].ID + ".json"
+		dataFilePath := "data/warnings/" + locations[i].ID + ".json"
 		err = os.WriteFile(dataFilePath, data, 0644)
 		if err != nil {
-			common.ErrorLogger.Printf("Unable to write departure data to file %s", dataFilePath)
+			common.ErrorLogger.Printf("Unable to write warnings data to file %s", dataFilePath)
 		}
 	}
 }
 
-func GetWeatherForecast() {
-	// Retrieve data every hour
-	getAndSaveWeatherForecast()
-	ticker := time.NewTicker(time.Minute * 60)
+func GetWarnings() {
+	// Retrieve data 15 minutes
+	getAndSaveWarnings()
+	ticker := time.NewTicker(time.Minute * 15)
 	for range ticker.C {
-		getAndSaveWeatherForecast()
+		getAndSaveWarnings()
 	}
 }

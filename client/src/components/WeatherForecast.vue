@@ -1,6 +1,6 @@
 <template>
     <div class="bg-black/20 text-xl font-bold p-4 border-b border-slate-700 px-4 py-2 rounded-t-lg">Wetter</div>
-    <div class="flex flex-1 self-stretch w-full h-full">
+    <div class="flex flex-1 self-stretch w-full h-full overflow-auto">
         <div class="w-full grid grid-cols-4 grid-rows-[3rem_1fr_3rem_3rem] gap-x-4 gap-y-0.5 text-center p-4 text-base">
             <div v-for="(item, index) in forecastDates" :key="index" class="bg-black/20 rounded-t-md flex items-center justify-center font-bold">{{ item }}</div>
 

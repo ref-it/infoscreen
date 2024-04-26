@@ -27,11 +27,15 @@
                 <WeatherForecast id="N5346" />
             </div>
 
-            <div class="h-full row-span-4 row-start-6 col-start-3 border border-slate-700 rounded-lg grid-box">
+            <!--<div class="h-full row-span-4 row-start-6 col-start-3 border border-slate-700 rounded-lg grid-box">
                 <WebcamIlmenau />
+            </div>-->
+
+            <div class="h-full row-span-5 row-start-1 col-start-4 border border-slate-700 rounded-lg grid-box">
+                <WarningsNina id="160700000000" />
             </div>
 
-            <div class="h-full row-span-6 row-start-1 col-start-4 border border-slate-700 rounded-lg grid-box">
+            <div class="h-full row-span-7 row-start-6 col-start-3 border border-slate-700 rounded-lg grid-box">
                 <IL_Events />
             </div>
 
@@ -43,7 +47,7 @@
                 <IL_BusDepartures_Kirchhoff />
             </div>-->
 
-            <div class="h-full row-span-6 row-start-7 col-start-4 border border-slate-700 rounded-lg overflow-hidden grid-box">
+            <div class="h-full row-span-7 row-start-6 col-start-4 border border-slate-700 rounded-lg overflow-hidden grid-box">
                 <DeparturesTrain id="8010178" />
             </div>
 
@@ -52,7 +56,7 @@
             </div>-->
         </div>
 
-        <PageFooter />
+        <!--<PageFooter />-->
     </div>
 </template>
 
@@ -67,6 +71,7 @@
     import IL_Konsul from '@/components/IL_Konsul.vue'
     import WebcamIlmenau from '@/components/WebcamIlmenau.vue'
     import WeatherForecast from '@/components/WeatherForecast.vue'
+    import WarningsNina from '@/components/WarningsNina.vue'
 
     const hours = ref()
 
