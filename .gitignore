@@ -60,3 +60,14 @@ coverage
 *.tsbuildinfo
 
 client/src/assets/main.css
+client/public/weather-icons/_builder
+client/public/weather-icons/_docs
+client/public/weather-icons/css
+client/public/weather-icons/font
+client/public/weather-icons/less
+client/public/weather-icons/sass
+client/public/weather-icons/values
+client/public/weather-icons/.gitignore
+client/public/weather-icons/.npmignore
+client/public/weather-icons/bower.json
+client/public/weather-icons/package.json
