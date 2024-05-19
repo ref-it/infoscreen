@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "npx tailwindcss -i ./src/assets/main.dev.css -o ./src/assets/main.css --minify && vite",
-    "build": "run-p type-check \"build-only {@}\" --",
+    "build": "npx tailwindcss -i ./src/assets/main.dev.css -o ./src/assets/main.css --minify && run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",

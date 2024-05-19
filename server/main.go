@@ -53,6 +53,8 @@ func main() {
 	go retrieve.GetTrainDepartures()
 	go retrieve.GetWeatherForecast()
 	go retrieve.GetWarnings()
+	go retrieve.GetCafeOpenings()
+	go retrieve.GetCalendars()
 
 	router := mux.NewRouter()
 
@@ -61,6 +63,8 @@ func main() {
 	router.HandleFunc("/api/departures/camil", handle.CamilDearturesHandler)
 	router.HandleFunc("/api/weather/forecast", handle.WeatherForecastHandler)
 	router.HandleFunc("/api/warnings", handle.WarningsHandler)
+	router.HandleFunc("/api/bc-cafe", handle.CafeOpeningsHandler)
+	router.HandleFunc("/api/events", handle.EventsHandler)
 	//http.Handle("/", router)
 
 	spa := spaHandler{staticPath: "../client/dist", indexPath: "index.html"}

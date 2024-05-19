@@ -19,7 +19,7 @@ func getAndSaveMenus() {
 	}
 
 	// Check if the current time is in the time range of interest
-	if currentTime > 500 && currentTime < 2000 {
+	if currentTime > 0 && currentTime < 100 || currentTime > 500 && currentTime < 2000 {
 		common.InfoLogger.Println("Retrieving menu data")
 
 		// Open the config file with a list of all canteen names, ID numbers and maps of abbrevations for additives and allergens
@@ -43,7 +43,7 @@ func getAndSaveMenus() {
 		// Iterate over all Canteens
 		for i := 0; i < len(canteenData.Canteens); i++ {
 			// Check if the current time is in the time range of interest for the specific Canteen
-			if currentTime < 1400 || currentTime < 1430 && canteenData.Canteens[i].ID == 46 || canteenData.Canteens[i].ID == 53 {
+			if currentTime > 0 && currentTime < 100 || currentTime < 1400 || currentTime < 1430 && canteenData.Canteens[i].ID == 46 || canteenData.Canteens[i].ID == 53 {
 				// Retrieve and parse the menu data
 				mealsLunch, mealsDinner := parse.ParseMenu(canteenData.Canteens[i].ID, time.Now().Format("02.01.2006"), canteenData.Additives, canteenData.Allergens)
 

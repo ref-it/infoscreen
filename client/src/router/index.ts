@@ -32,6 +32,14 @@ const router = createRouter({
       path: '/il/canteens',
       name: 'il-canteens',
       component: () => import('../views/ilmenau/CanteensView.vue')
+    },
+    { 
+      path: '/il/a013-left',
+      component: () => import('../views/ilmenau/BlockA013Left.vue')
+    },
+    { 
+      path: '/il/a013-right',
+      component: () => import('../views/ilmenau/BlockA013Right.vue')
     }
   ]
 })

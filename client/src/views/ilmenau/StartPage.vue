@@ -34,6 +34,14 @@ const screens = [
     {
         title: 'Mensen & Kantinen',
         href: '/il/canteens',
+    },
+    { 
+        title: 'Block A, Raum 013 (links)',
+        href: '/il/a013-left',
+    },
+    { 
+        title: 'Block A, Raum 013 (right)',
+        href: '/il/a013-right',
     }
 ]
 </script>

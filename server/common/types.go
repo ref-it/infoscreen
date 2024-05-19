@@ -139,3 +139,29 @@ type WarningInfo struct {
 	Description string `json:"description"`
 	Instruction string `json:"instruction"`
 }
+
+type LaraEventList struct {
+	GeneratedOn string      `json:"generated_on"`
+	Events      []LaraEvent `json:"events"`
+}
+
+type LaraEvent struct {
+	ImportID  string `json:"import_id"`
+	Name      string `json:"name"`
+	StartDate string `json:"start"`
+	StartTime string `json:"start_time"`
+	EndDate   string `json:"end"`
+	EndTime   string `json:"end_time"`
+	Place     string `json:"place"`
+	Marquee   string `json:"marquee"`
+	Cancelled bool   `json:"cancelled"`
+	UpdatedOn string `json:"updated_on"`
+}
+
+type Event struct {
+	Summary   string `json:"summary"`
+	StartDate string `json:"startDate"`
+	StartTime string `json:"startTime"`
+	EndDate   string `json:"endDate"`
+	EndTime   string `json:"endTime"`
+}

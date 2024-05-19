@@ -44,7 +44,7 @@
                 <span v-if="item.temperatureMin / 10 < 0" class="bg-cyan-500 text-zinc-800 flex items-center justify-center w-full">{{ item.temperatureMin / 10 }} °C</span>
                 <span v-if="item.temperatureMin / 10 < 5" class="bg-emerald-600 flex items-center justify-center w-full">{{ item.temperatureMin / 10 }} °C</span>
                 <span v-else-if="item.temperatureMin / 10 < 10" class="bg-green-700 flex items-center justify-center w-full">{{ item.temperatureMin / 10 }} °C</span>
-                <span v-else-if="item.temperatureMin / 10 < 15" class="bg-lime-500 text-zinc-800 flex items-center justify-centerw-full">{{ item.temperatureMin / 10 }} °C</span>
+                <span v-else-if="item.temperatureMin / 10 < 15" class="bg-lime-500 text-zinc-800 flex items-center justify-center w-full">{{ item.temperatureMin / 10 }} °C</span>
                 <span v-else-if="item.temperatureMin / 10 < 20" class="bg-lime-300 text-zinc-800 flex items-center justify-center w-full">{{ item.temperatureMin / 10 }} °C</span>
                 <span v-else-if="item.temperatureMin / 10 < 25" class="bg-yellow-500 text-zinc-800 flex items-center justify-center w-full">{{ item.temperatureMin / 10 }} °C</span>
                 <span v-else-if="item.temperatureMin / 10 < 30" class="bg-orange-500 flex items-center justify-center w-full">{{ item.temperatureMin / 10 }} °C</span>

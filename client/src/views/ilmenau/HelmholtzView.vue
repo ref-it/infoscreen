@@ -36,7 +36,7 @@
             </div>
 
             <div class="h-full row-span-6 row-start-7 col-start-3 border border-zinc-700 rounded-lg grid-box">
-                <IL_Events />
+                <EventCalendar />
             </div>
 
             <!--<div class="h-full row-span-1 row-start-4 col-start-3 border border-zinc-700 rounded-lg grid-box">
@@ -67,7 +67,7 @@
     import CanteenMenu from '@/components/CanteenMenu.vue'
     import DeparturesTrain from '@/components/DeparturesTrain.vue'
     import IL_BusDepartures_Kirchhoff from '@/components/IL_BusDepartures_Kirchhoff.vue'
-    import IL_Events from '@/components/IL_Events.vue'
+    import EventCalendar from '@/components/EventCalendar.vue'
     import IL_Konsul from '@/components/IL_Konsul.vue'
     import WebcamIlmenau from '@/components/WebcamIlmenau.vue'
     import WeatherForecast from '@/components/WeatherForecast.vue'
