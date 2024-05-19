@@ -40,7 +40,7 @@ func getAndSaveCalendars() {
 		reqest, _ := http.NewRequest("GET", calendars[i], nil)
 		response, _ := http.DefaultClient.Do(reqest)
 
-		start, end := time.Now(), time.Now().Add(4*24*time.Hour)
+		start, end := time.Now(), time.Now().Add(5*24*time.Hour)
 
 		c := gocal.NewParser(response.Body)
 		c.Start, c.End = &start, &end

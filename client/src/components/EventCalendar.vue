@@ -5,12 +5,16 @@
     <div v-if="events.length > 0" class="h-full grid grid-box3 overflow-y-auto">
         <div v-if="events.length > 0">
             <div class="h-full w-full">
-                <div v-for="(item, index) in events" :key="index" class="grid grid-events border-b border-zinc-700">
-                    <div class="px-4 py-2">
-                        <div class="text-base">{{ weekday[new Date(item.startDate).getDay()] }}, {{ item.startDate.split('-')[2] }}.{{ item.startDate.split('-')[1] }}.</div>
-                        <div class="text-base">{{ item.startTime }}</div>
+                <div v-for="(day, dayIndex) in events" :key="dayIndex">
+                    <div class="w-full bg-black/20 border-b border-zinc-700 px-4 py-1.5 text-sm font-bold">
+                        {{ weekday[new Date(day[0].startDate).getDay()] }}, {{ day[0].startDate.split('-')[2] }}.{{ day[0].startDate.split('-')[1] }}.{{ day[0].startDate.split('-')[0] }}
                     </div>
-                    <div class="px-4 py-2 text-base">{{ item.summary }}</div>
+                    <div v-for="(item, itemIndex) in day" :key="itemIndex" class="grid grid-events border-b border-zinc-700">
+                        <div class="px-4 py-2">
+                            <div class="text-base">{{ item.startTime }} &ndash; {{ item.endTime }}</div>
+                        </div>
+                        <div class="px-4 py-2 text-base">{{ item.summary }}</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -51,6 +55,6 @@
         grid-template-rows: auto 1fr;
     }
     .grid-events {
-        grid-template-columns: 9rem 1fr;
+        grid-template-columns: auto 1fr;
     }
 </style>

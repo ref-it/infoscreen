@@ -23,7 +23,8 @@ func EventsHandler(w http.ResponseWriter, r *http.Request) {
 		common.ErrorLogger.Printf("Unable to unmarshal events data")
 	}
 
-	var events []common.Event
+	var events [][]common.Event
+	var eventsOfOneDay []common.Event
 	for i := 0; i < len(eventsFull); i++ {
 		var event common.Event
 		event.Summary = eventsFull[i].Summary
@@ -31,8 +32,13 @@ func EventsHandler(w http.ResponseWriter, r *http.Request) {
 		event.StartTime = eventsFull[i].Start.Format("15:04")
 		event.EndDate = eventsFull[i].End.Format("2006-01-02")
 		event.EndTime = eventsFull[i].End.Format("15:04")
-		events = append(events, event)
+		if i != 0 && eventsOfOneDay[0].StartDate != event.StartDate {
+			events = append(events, eventsOfOneDay)
+			eventsOfOneDay = []common.Event{}
+		}
+		eventsOfOneDay = append(eventsOfOneDay, event)
 	}
+	events = append(events, eventsOfOneDay)
 
 	data, err := json.Marshal(events)
 	if err != nil {
