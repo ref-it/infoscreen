@@ -20,7 +20,7 @@
                 </div>
             </div>
         </div>
-        <div v-else class="w-full h-full flex items-center justify-center text-xl">
+        <div v-else class="w-full h-full flex items-center justify-center text-xl p-4">
             <p>Keine Verbindungen in nächster Zeit.</p>
         </div>
     </div>

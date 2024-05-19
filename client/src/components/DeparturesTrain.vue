@@ -22,7 +22,7 @@
                 </div>
             </div>
         </div>
-        <div v-else class="px-4 py-2 text-xl m-auto text-center">
+        <div v-else class="px-4 py-2 text-xl m-auto text-center p-4">
             <p>Keine Verbindungen in nächster Zeit.</p>
         </div>
     </div>
@@ -40,7 +40,7 @@
     const trainDepartures: any = ref([])
 
     // Reactive station name
-    const stationName = ref()
+    const stationName = ref('')
     
     const getTrainDepartures = () => {
         const url = '/api/departures/train?station=' + props.id
