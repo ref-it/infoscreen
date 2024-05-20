@@ -31,6 +31,10 @@ const screens = [
         title: 'Helmholtz',
         href: '/il/helmholtz',
     },
+    { 
+        title: 'FSR IA (Z 1090)',
+        href: '/il/z1090',
+    },
     {
         title: 'Mensen & Kantinen',
         href: '/il/canteens',
@@ -40,7 +44,7 @@ const screens = [
         href: '/il/a013-left',
     },
     { 
-        title: 'Block A, Raum 013 (right)',
+        title: 'Block A, Raum 013 (rechts)',
         href: '/il/a013-right',
     }
 ]

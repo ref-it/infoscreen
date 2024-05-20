@@ -40,6 +40,10 @@ const router = createRouter({
     { 
       path: '/il/a013-right',
       component: () => import('../views/ilmenau/BlockA013Right.vue')
+    },
+    { 
+      path: '/il/z1090',
+      component: () => import('../views/ilmenau/ZuseBau1090.vue')
     }
   ]
 })

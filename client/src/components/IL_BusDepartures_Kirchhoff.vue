@@ -1,16 +1,24 @@
 <template>
-    <div class="bg-black/20 text-xl font-bold border-b border-zinc-700 px-4 py-2 rounded-t-lg">Busverbindungen (G.-Kirchhoff-Platz)</div>
-    <div class="h-full grid-box2 pb-2 flex">
-        <div v-if="weekday != 0 && weekday != 6 && connections_bus_shown.length > 0" class="w-full">
-            <div class="grid grid-bus bg-black/20 border-b border-zinc-700">
+
+        <div class="bg-black/20 text-xl font-bold p-4 border-b border-zinc-700 pl-4 pr-2 py-2 rounded-t-lg grid header-with-badge">
+        <span>Abfahrten</span>
+        <div class="-mt-02">
+            <span class="inline-flex items-center rounded-md bg-emerald-400/10 ml-auto px-2 py-1 text-sm text-emerald-400 ring-1 ring-inset ring-emerald-400/30">G.-Kirchhoff-Platz</span>
+        </div>
+    </div>
+    <div class="h-full grid grid-box3">
+        <div v-if="weekday != 0 && weekday != 6 && connections_bus_shown.length > 0">
+            <div class="grid grid-train bg-black/20 border-b border-zinc-700">
                 <div class="px-4 py-1.5 text-sm font-bold">Linie</div>
-                <div class="px-4 py-1.5 text-sm font-bold">Abfahrt G.-Kirchhoff-Platz</div>
-                <div class="px-4 py-1.5 text-sm font-bold">Ankunft Bahnhof</div>
+                <div class="px-4 py-1.5 text-sm font-bold">Abfahrt</div>
+                <div class="px-4 py-1.5 text-sm font-bold">Ziel</div>
             </div>
-            <div v-for="(connection, index) in connections_bus_shown" :key="index" class="grid grid-bus border-b border-zinc-700">
-                <div class="px-4 py-2 text-xl">{{ connection.line }}</div>
-                <div class="px-4 py-2 text-xl">{{ connection.start }}</div>
-                <div class="px-4 py-2 text-xl">{{ connection.end }}</div>
+            <div class="h-full w-full overflow-y-auto">
+                <div v-for="(connection, index) in connections_bus_shown" :key="index" class="grid grid-train border-b border-zinc-700">
+                    <div class="px-4 py-2 text-xl">{{ connection.category }} {{ connection.line }}</div>
+                    <div class="px-4 py-2 text-xl">{{ connection.hours }}:{{ connection.minutes }}</div>
+                    <div class="px-4 py-2 text-xl">{{ connection.destination }}</div>
+                </div>
             </div>
         </div>
         <div v-else-if="weekday != 0 && weekday != 6 && connections_bus_shown == 0" class="px-4 py-2 text-xl m-auto text-center">
@@ -19,10 +27,10 @@
         <div v-else class="px-3 py-2 text-xl m-auto m-auto text-center">
             <p>CAMIL (Linie D) fährt nur von Montag bis Freitag.</p>
         </div>
-        <div class="px-3 mt-auto">
+        <!--<div class="px-3 mt-auto">-->
             <!-- <div class="w-full h-px bg-zinc-700 mb-2" aria-hidden="true"></div> -->
-            <img class="w-full rounded-lg max-h-52" src="@/assets/img/camil-haltestelle-kirchhoff.svg">
-        </div>
+            <!--<img class="w-full rounded-lg max-h-52" src="@/assets/img/camil-haltestelle-kirchhoff.svg">
+        </div>-->
     </div>
 </template>
   
@@ -38,39 +46,53 @@
   
     const connections_bus = [
         {
+            category: "Bus",
             line: "D",
-            start: "10:05",
-            end: "10:20"
+            hours: "10",
+            minutes: "05",
+            destination: "Neuhäuser Weg"
         },
         {
+            category: "Bus",
             line: "D",
-            start: "11:05",
-            end: "11:20"
+            hours: "11",
+            minutes: "05",
+            destination: "Neuhäuser Weg"
         },
         {
+            category: "Bus",
             line: "D",
-            start: "12:05",
-            end: "12:20"
+            hours: "12",
+            minutes: "05",
+            destination: "Neuhäuser Weg"
         },
         {
+            category: "Bus",
             line: "D",
-            start: "13:55",
-            end: "14:10"
+            hours: "13",
+            minutes: "55",
+            destination: "Neuhäuser Weg"
         },
         {
+            category: "Bus",
             line: "D",
-            start: "14:55",
-            end: "15:10"
+            hours: "14",
+            minutes: "55",
+            destination: "Neuhäuser Weg"
         },
         {
+            category: "Bus",
             line: "D",
-            start: "15:55",
-            end: "16:10"
+            hours: "15",
+            minutes: "55",
+            destination: "Neuhäuser Weg"
         },
         {
+            category: "Bus",
             line: "D",
-            start: "16:55",
-            end: "17:10"
+            hours: "16",
+            minutes: "55",
+            destination: "Neuhäuser Weg"
         }
     ]
   
@@ -84,10 +106,8 @@
     
         for (let i = 0; i < connections_bus.length; i++) {
             if (connections_bus_shown.value.length < 2) {
-                const connectionHour = +connections_bus[i].start.split(':')[0]
-                const connectionMinute = +connections_bus[i].start.split(':')[1]
-                if (hour <= connectionHour && connectionHour - hour <= 2) {
-                    if (minute <= connectionMinute) {
+                if (hour <= +connections_bus[i].hours && +connections_bus[i].hours - hour <= 2) {
+                    if (minute <= +connections_bus[i].minutes) {
                         connections_bus_shown.value.push(connections_bus[i])
                     }
                 }
@@ -104,12 +124,10 @@
 </script>
   
 <style scoped>
-    .grid-box2 {
-        display: grid;
-        grid-template-rows: 1fr auto;
+    .grid-box3 {
+        grid-template-rows: auto 1fr;
     }
-
-    .grid-bus {
-        grid-template-columns: 1fr 13.5rem 10rem;
+    .grid-train {
+        grid-template-columns: 6.8rem 5.3rem 1fr;
     }
 </style>

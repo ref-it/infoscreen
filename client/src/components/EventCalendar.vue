@@ -11,7 +11,7 @@
                     </div>
                     <div v-for="(item, itemIndex) in day" :key="itemIndex" class="grid grid-events border-b border-zinc-700">
                         <div class="px-4 py-2">
-                            <div class="text-base">{{ item.startTime }} &ndash; {{ item.endTime }}</div>
+                            <div class="text-base">{{ item.startTime }}&ndash;{{ item.endTime }}</div>
                         </div>
                         <div class="px-4 py-2 text-base">{{ item.summary }}</div>
                     </div>

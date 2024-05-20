@@ -2,8 +2,8 @@
     <div class="bg-black/20 text-xl font-bold p-4 border-b border-zinc-700 pl-4 pr-2 py-2 rounded-t-lg grid header-with-badge">
         <span>{{ canteenName }}</span>
         <div class="-mt-02">
-            <span v-if="props.id == 53 && hours < 17" class="inline-flex items-center rounded-md bg-blue-400/10 ml-auto px-2 py-1 text-sm text-blue-400 ring-1 ring-inset ring-blue-400/30">Mittag</span>
-            <span v-else-if="props.id == 53 && hours >= 17" class="inline-flex items-center rounded-md bg-blue-400/10 ml-auto px-2 py-1 text-sm text-blue-400 ring-1 ring-inset ring-blue-400/30">Abend</span>
+            <span v-if="props.id == 53 && hours < 17" class="inline-flex items-center rounded-md bg-emerald-400/10 ml-auto px-2 py-1 text-sm text-emerald-400 ring-1 ring-inset ring-emerald-400/30">Mittag</span>
+            <span v-else-if="props.id == 53 && hours >= 17" class="inline-flex items-center rounded-md bg-emerald-400/10 ml-auto px-2 py-1 text-sm text-emerald-400 ring-1 ring-inset ring-emerald-400/30">Abend</span>
         </div>
     </div>
     <div class="h-full overflow-y-auto flex flex-col">

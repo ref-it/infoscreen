@@ -6,7 +6,7 @@
             <p class="text-base mt-2">{{ eventStartTime }} &ndash; {{ eventEndTime }} Uhr</p>
             <p v-if="eventMarquee != undefined" class="text-base mt-6">{{ eventMarquee }}</p>
         </div>
-        <div v-else class="w-full h-full flex items-center justify-center text-xl">
+        <div v-else class="w-full h-full flex items-center justify-center text-xl text-center">
             Heute hat das Café leider geschlossen.
         </div>
     </div>
