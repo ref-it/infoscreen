@@ -20,11 +20,11 @@
                 <CanteenMenu id="55" />
             </div>-->
 
-            <div class="h-full row-span-6 row-start-1 col-start-3 border border-zinc-700 rounded-lg grid-box">
+            <div class="h-full row-span-7 row-start-1 col-start-3 border border-zinc-700 rounded-lg grid-box">
                 <WeatherForecast id="N5346" />
             </div>
 
-            <div class="h-full row-span-6 row-start-7 col-start-3 border border-zinc-700 rounded-lg overflow-hidden grid-box">
+            <div class="h-full row-span-5 row-start-8 col-start-3 border border-zinc-700 rounded-lg overflow-hidden grid-box">
                 <IL_BusDepartures_Kirchhoff />
             </div>
 
