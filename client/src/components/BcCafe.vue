@@ -7,7 +7,7 @@
             <p v-if="eventMarquee != undefined" class="text-base mt-6">{{ eventMarquee }}</p>
         </div>
         <div v-else class="w-full h-full flex items-center justify-center text-xl text-center">
-            Heute hat das Café leider geschlossen.
+            Heute hat das Café leider nicht (mehr) offen.
         </div>
     </div>
 </template>
