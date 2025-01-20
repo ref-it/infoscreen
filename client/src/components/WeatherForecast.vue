@@ -28,8 +28,8 @@
 
             <div v-for="(item, index) in forecast.days" :key="index" class="flex w-full">
                 <span v-if="item.temperatureMax / 10 < -5" class="bg-sky-700 flex items-center justify-center w-full">{{ item.temperatureMax / 10 }} °C</span>
-                <span v-if="item.temperatureMax / 10 < 0" class="bg-cyan-500 text-zinc-800 flex items-center justify-center w-full">{{ item.temperatureMax / 10 }} °C</span>
-                <span v-if="item.temperatureMax / 10 < 5" class="bg-emerald-600 flex items-center justify-center w-full">{{ item.temperatureMax / 10 }} °C</span>
+                <span v-else-if="item.temperatureMax / 10 < 0" class="bg-cyan-500 text-zinc-800 flex items-center justify-center w-full">{{ item.temperatureMax / 10 }} °C</span>
+                <span v-else-if="item.temperatureMax / 10 < 5" class="bg-emerald-600 flex items-center justify-center w-full">{{ item.temperatureMax / 10 }} °C</span>
                 <span v-else-if="item.temperatureMax / 10 < 10" class="bg-green-700 flex items-center justify-center w-full">{{ item.temperatureMax / 10 }} °C</span>
                 <span v-else-if="item.temperatureMax / 10 < 15" class="bg-lime-500 text-zinc-800 flex items-center justify-center w-full">{{ item.temperatureMax / 10 }} °C</span>
                 <span v-else-if="item.temperatureMax / 10 < 20" class="bg-lime-300 text-zinc-800 flex items-center justify-center w-full">{{ item.temperatureMax / 10 }} °C</span>
